@@ -33,11 +33,16 @@ int main(){
             }
         }
 
+        //sjekker først om døren er åpen if (elevio_door open lamp(1))
+        // deretter  sjekker om obstruction 
         if(elevio_obstruction()){
             elevio_stopLamp(1);
         } else {
-            elevio_stopLamp(0);
+                elevio_stopLamp(0);
         }
+
+        
+        
         
         if(elevio_stopButton()){
             elevio_motorDirection(DIRN_STOP);

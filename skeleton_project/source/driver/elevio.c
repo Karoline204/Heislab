@@ -74,7 +74,7 @@ void elevio_floorIndicator(int floor){
     pthread_mutex_unlock(&sockmtx);
 }
 
-
+//
 void elevio_doorOpenLamp(int value){
     pthread_mutex_lock(&sockmtx);
     send(sockfd, (char[4]){4, value}, 4, 0);
